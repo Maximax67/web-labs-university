@@ -35,6 +35,7 @@ table, th, td {
 .header_cell {
     width: 100%;
     height: 25%;
+    
 }
 
 .cell_content {
@@ -81,7 +82,6 @@ a.logo {
 }
 
 .aside-right {
-    width: 100%;
     background-color: #fde8d8;
     display: flex;
     justify-content: right;
@@ -178,7 +178,6 @@ a.logo {
     width: 100%;
     background-color: #c7d9f0;
     display: flex;
-    align-items: top;
     justify-content: space-between;
 }
 
@@ -215,11 +214,6 @@ a.logo {
 .page_table {
     width: 100%;
     height: 100%
-}
-
-.aside_content {
-    width: 100%;
-    height: 50%;
 }
 
 .aside_cell {

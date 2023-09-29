@@ -49,15 +49,27 @@ html, body {
     grid-column: 1/5;
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: minmax(50px, auto) minmax(auto, 50px);
+    grid-template-columns: 2fr 1fr;
     place-content: stretch
 }
 
-.header .header_content {
-    padding-left: 5%;
-    display: flex;
-    justify-content: space-between;
+.header-info {
+    display: grid;
     align-items: center;
+}
+
+.header-logo {
+    display: grid;
+    align-items: center;
+}
+
+.text-aligner {
+    margin-left: 8%;
+    display: grid;
+}
+
+.text-aligner h2 {
+    margin-bottom: 3.5%;
 }
 
 a.logo {
@@ -93,16 +105,20 @@ a.logo {
 
 .aside-left-top {
     background-color: #fde8d8;
-    display: flex;
+    display: grid;
     align-items: center;
     overflow: auto;
 }
 
 .aside-left-bottom {
     background-color: #ebf1dc;
-    display: flex;
+    display: grid;
     align-items: center;
     overflow: auto;
+}
+
+.content-grid {
+    display: grid;
 }
 
 #main-content {
@@ -122,6 +138,7 @@ a.logo {
 
 #main-content p, ul, ol {
     padding: 0 5%;
+    margin: 0;
     text-align: left;
 }
 
@@ -129,10 +146,12 @@ a.logo {
     grid-column: 4/5;
     grid-row: 2/5;
     display: grid;
-    float: right;
-    display: flex;
     align-items: center;
     background-color: #fde8d8;
+}
+
+.navigation {
+    display: grid;
 }
 
 .aside-right nav {
@@ -170,8 +189,8 @@ a.logo {
     grid-column: 1/4;
     grid-row: 3/4;
     background-color: #c7d9f0;
-    display: flex;
-    align-items: top;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     justify-content: space-between;
 }
 
@@ -179,16 +198,16 @@ footer span {
     font-family: 'Cloister';
     color: black;
     text-decoration: none;
-    text-align: center;
+    text-align: left;
     font-size: 48px;
     margin-top: 1%;
     padding-left: 5%;
 }
 
-footer div {
+.footer-text-aligner {
     height: 100%;
-    width: 40%;
-    display: flex;
+    width: 100%;
+    display: grid;
     align-items: center;
     justify-content: center;
     overflow: auto;
