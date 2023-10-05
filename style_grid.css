@@ -41,7 +41,7 @@ html, body {
     grid-template-rows: 1fr 1fr 1fr 1fr
 }
 
-.header {
+header {
     width: 100%;
     background-color: #c7d9f0;
     margin: 0;
@@ -81,7 +81,7 @@ a.logo {
     font-size: 72px;
 }
 
-.header h2, .header p, .aside-right nav a, #main-content, footer { 
+header h2, header p, .aside-right nav a, #main-content, footer { 
     font-family: 'Cabin';
     font-size: 18px;
 }
