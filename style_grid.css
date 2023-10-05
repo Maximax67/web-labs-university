@@ -181,7 +181,7 @@ header h2, header p, .aside-right nav a, #main-content, footer {
     grid-row: 2/5
 }
 
-.footer {
+footer {
     grid-column: 1/4;
     grid-row: 3/4;
     background-color: #c7d9f0;

@@ -238,6 +238,7 @@ footer {
     background-color: #c7d9f0;
     display: flex;
     height: 33%;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -264,11 +265,4 @@ footer div p {
     margin: auto 0 auto ;
     padding-right: 10%;
     text-align: justify;
-}
-
-.footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center
 }
