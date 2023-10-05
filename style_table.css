@@ -181,17 +181,25 @@ header h2, header p, .aside-right nav a, #aside-left, #main-content, footer {
 .aside-left-top {
     height: 50%;
     background-color: #fde8d8;
-    display: grid;
-    align-items: center;
+    vertical-align: middle;
     overflow: auto;
+    display: table;
+    width: 100%;
 }
 
 .aside-left-bottom {
     height: 50%;
     background-color: #ebf1dc;
-    align-items: center;
-    display: grid;
+    vertical-align: middle;
     overflow: auto;
+    display: table;
+}
+
+.aside-left-top p, .aside-left-bottom p {
+    margin: 0;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .footer {
