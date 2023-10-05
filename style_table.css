@@ -181,7 +181,7 @@ header h2, header p, .aside-right nav a, #aside-left, #main-content, footer {
 .aside-left-top {
     height: 50%;
     background-color: #fde8d8;
-    display: flex;
+    display: grid;
     align-items: center;
     overflow: auto;
 }
@@ -189,8 +189,8 @@ header h2, header p, .aside-right nav a, #aside-left, #main-content, footer {
 .aside-left-bottom {
     height: 50%;
     background-color: #ebf1dc;
-    display: flex;
     align-items: center;
+    display: grid;
     overflow: auto;
 }
 

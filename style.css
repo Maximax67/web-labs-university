@@ -28,18 +28,14 @@ html, body {
 }
 
 .parent_div {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     min-width: 1000px;
     min-height: 800px
 }
 
 .flex_parent {
+    height: 100%;
     display: flex;
-    flex-flow: row wrap
+    flex-flow: row wrap;
 }
 
 header {
