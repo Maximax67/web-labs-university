@@ -294,7 +294,7 @@ footer div p {
         grid-row: 3 / span 2;
         display: grid;
         align-items: center;
-        background-color: #ffd4b3;
+        background-color: #fde8d8;
     }
     footer {
         grid-row: 4;
