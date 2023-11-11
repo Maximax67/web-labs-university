@@ -48,7 +48,7 @@ function deleteAllCookies() {
         const cookieName = cookieParts[0];
 
         // Delete the cookie with a path of '/'
-        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/web-labs-university/lab5; domain=${window.location.hostname};`;
+        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/web-labs-university/lab5; domain=${window.location.hostname}`;
     }
 
     // Optionally, reload the page after deleting all cookies
