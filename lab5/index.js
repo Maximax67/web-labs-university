@@ -51,7 +51,7 @@ window.onload = function() {
 
         if (userDecision) {
             // If the user confirms deletion, delete cookies and refresh the page
-            document.cookie = 'maxNumberCount=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/web-labs-university/lab5;';
+            document.cookie = 'maxNumberCount=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/web-labs-university/lab5; Secure; SameSite=None';
             location.reload();
         } else {
             // If the user declines, display a message about the need to reload the page
