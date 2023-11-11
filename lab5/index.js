@@ -40,36 +40,24 @@ const onClickMaxHandler = () => {
     alert(`Count of maximum numbers: ${maxNumberCount}`);
 };
 
-function deleteAllCookies() {
-    const cookies = document.cookie.split("; ");
-
-    for (let i = 0; i < cookies.length; i++) {
-        const cookieParts = cookies[i].split("=");
-        const cookieName = cookieParts[0];
-
-        // Delete the cookie with a path of '/'
-        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/web-labs-university/lab5; domain=${window.location.hostname}`;
-    }
-
-    // Optionally, reload the page after deleting all cookies
-    location.reload();
-}
-
 window.onload = function() {
     const cookies = document.cookie;
     if (cookies.includes('maxNumberCount')) {
         // Parse cookies to get maxNumberCount
         const maxNumberCount = parseInt(cookies.split('; ').find(row => row.startsWith('maxNumberCount')).split('=')[1]);
-        
-        // If there are data in cookies, display information and ask the user
-        const userDecision = confirm(`Count of maximum numbers saved in cookies: ${maxNumberCount}. Delete data?`);
 
-        if (userDecision) {
-            // If the user confirms deletion, delete cookies and refresh the page
-            deleteAllCookies();
-        } else {
-            // If the user declines, display a message about the need to reload the page
-            alert('Data in cookies will remain. Reload the page to update.');
+        if (maxNumberCount) {
+            // If there are data in cookies, display information and ask the user
+            const userDecision = confirm(`Count of maximum numbers saved in cookies: ${maxNumberCount}. Delete data?`);
+
+            if (userDecision) {
+                // If the user confirms deletion, delete cookies and refresh the page
+                document.cookie = 'maxNumberCount=0';
+                location.reload();
+            } else {
+                // If the user declines, display a message about the need to reload the page
+                alert('Data in cookies will remain. Reload the page to update.');
+            }
         }
     }
 };
