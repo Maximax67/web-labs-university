@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_grid.css">
+    <title>LAB3</title>
+</head>
+<body>
+    <div class=parent_div>
+        <header>
+                <div class="header-info">
+                    <div class="text-aligner">
+                        <h2 ondblclick="editElement(this)">
+                            Very good site!
+                        </h2>
+                        <div ondblclick="editElement(this)">IP-24, 1 variant</div>
+                    </div>
+                </div>
+                
+                <div class="header-logo">
+                    <a class="logo" ondblclick="editElement(this, 72, 'input', 500)">
+                        Maxim Belikov
+                    </a>
+                </div>
+        </header>
+        <main class=content_container>
+            <section class="section_left aside-left">
+                <aside class="aside-left-top">
+                    <p ondblclick="editElement(this, 16, 'textarea', 300, '#fde8d8')">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nam voluptas dignissimos repellat iure mollitia blanditiis obcaecati doloribus aspernatur similique explicabo quis accusantium, hic saepe.
+                    </p>
+                    <div>
+                        <h4>New color (e.g. #ff0000):</h4>
+                        <div>
+                            <label for="inputColor">Write color:</label>
+                            <input type="text" id="inputColor">
+                        </div>
+                    </div>
+                </aside>
+                <aside class="aside-left-bottom">
+                    <p ondblclick="editElement(this, 16, 'textarea', 300, '#ebf1dc')">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate unde eius nobis. Beatae dolores deserunt, aliquam, illum maiores, repudiandae voluptatibus nihil et sed perspiciatis fugit laborum quo blanditiis sequi debitis.
+                    </p>
+                </aside>
+            </section>
+
+            <main id="main-content">
+                <div class="content-grid">
+                    <h1 ondblclick="editElement(this, 32)">MAIN PAGE</h1>
+                    <p ondblclick="editElement(this, 18)">Some random text.</p>
+                    <div class="result">
+                        <h4 ondblclick="editElement(this, 18)">Calculation of the circle area</h4>
+                        <div>
+                            <label for="inputCircleNum" ondblclick="editElement(this, 16)">Write Number</label>
+                            <input type="number" id="inputCircleNum">
+                        </div>
+                        <button onclick="onClickCircleHandler()">Result</button>
+                        <div class="resultCircleText"></div>
+                    </div>
+                    <div class="result">
+                        <h4 ondblclick="editElement(this, 18)">Determining the number of maximum numbers (9 -3 -1 0 4 9 9 = 3)</h4>
+                        <div>
+                            <label for="inputMaxNum" ondblclick="editElement(this, 16)">Write Number</label>
+                            <input type="text" id="inputMaxNum">
+                        </div>
+                        <button onclick="onClickMaxHandler()">Result</button>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <span class="logo2" ondblclick="editElement(this, 48, 'input', 300, '#c7d9f0')">
+                    IP-24
+                </span>
+                <div class="footer-text-aligner">
+                    <p ondblclick="editElement(this, 16, 'textarea', 300, '#c7d9f0')">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi eum dolorem nobis maxime autem quos facere esse at officiis quod voluptatem vel, provident quidem quisquam. Veritatis, cum!
+                    </p>
+                </div>
+            </footer>
+        </main>
+        <aside class="aside-right">
+            <nav class="navigation">
+                <a ondblclick="editElement(this, 18)">Some text 1</a>
+                <a ondblclick="editElement(this, 18)">Some text 2</a>
+                <a ondblclick="editElement(this, 18)">Some text 3</a>
+            </nav>
+        </aside>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
