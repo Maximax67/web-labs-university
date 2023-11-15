@@ -16,10 +16,12 @@ const resultBlock = document.querySelector('.resultCircleText');
 
 
 const onClickCircleHandler = () => {
-    const circleArea = calculateCircleArea(radiusValue.value);
-
-
-    resultBlock.innerHTML = `Area of a circle with a radius of ${radiusValue.value} units: ${circleArea.toFixed(2)}`;
+    if (+(radiusValue.value) > 0) {
+        const circleArea = calculateCircleArea(radiusValue.value);
+        resultBlock.innerHTML = `Area of a circle with a radius of ${radiusValue.value} units: ${circleArea.toFixed(2)}`;
+    } else {
+        resultBlock.innerHTML = 'Please enter a valid radius!';
+    }
 }
 
 // 3 task
@@ -27,17 +29,22 @@ const onClickCircleHandler = () => {
 const arrValue = document.querySelector('#inputMaxNum');
 
 const onClickMaxHandler = () => {
-    // Your code to get an array with 10 numbers
-    console.log(arrValue.value.split(' '));
-    const numbersArray = arrValue.value.split(' ').map(vl => +vl);
+    if (arrValue.value) {
+        const numbersArray = arrValue.value.split(' ').map(vl => +vl);
 
-    const maxNumber = Math.max(...numbersArray);
+        const maxNumber = Math.max(...numbersArray);
 
-    const maxNumberCount = numbersArray.filter(num => num === maxNumber).length;
+        const maxNumberCount = numbersArray.filter(num => num === maxNumber).length;
 
-    document.cookie = `maxNumberCount=${maxNumberCount}`;
-
-    alert(`Count of maximum numbers: ${maxNumberCount}`);
+        if (maxNumberCount === 0) {
+            alert('Enter at least one valid number!');
+        } else {
+            document.cookie = `maxNumberCount=${maxNumberCount}`;
+            alert(`Count of maximum numbers: ${maxNumberCount}`);
+        }
+    } else {
+        alert('Please write numbers!');
+    }
 };
 
 window.onload = function() {
